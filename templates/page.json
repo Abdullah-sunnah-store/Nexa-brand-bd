@@ -1,60 +1,57 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */{
+{
   "sections": {
+    "hero": {
+      "type": "nexa-page-hero",
+      "settings": {
+        "source": "page",
+        "show_breadcrumbs": true,
+        "band": "none",
+        "section_width": "page-width"
+      }
+    },
     "main": {
       "type": "main-page",
       "blocks": {
-        "heading": {
-          "type": "text",
-          "name": "t:names.title",
-          "settings": {
-            "text": "<h1>{{ closest.page.title }}</h1>",
-            "width": "100%",
-            "max_width": "normal",
-            "alignment": "left",
-            "type_preset": "h2",
-            "font": "var(--font-body--family)",
-            "line_height": "normal",
-            "letter_spacing": "normal",
-            "case": "none",
-            "wrap": "pretty",
-            "background": false,
-            "background_color": "#00000026",
-            "corner_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {}
-        },
         "page-content": {
           "type": "page-content",
-          "settings": {},
-          "blocks": {}
+          "settings": {}
         }
       },
-      "block_order": [
-        "heading",
-        "page-content"
-      ],
+      "block_order": ["page-content"],
       "settings": {
-        "content_direction": "column",
-        "gap": 32,
-        "background_color": "{{ settings.color_palette.background }}",
-        "padding-block-start": 40,
-        "padding-block-end": 80
+        "gap": 20,
+        "padding-block-start": 48,
+        "padding-block-end": 64
+      }
+    },
+    "promise": {
+      "type": "nexa-usp-bar",
+      "blocks": {
+        "u1": {
+          "type": "item",
+          "settings": { "icon": "truck", "title": "Nationwide delivery", "text": "Dhaka in 24-48 hrs, rest of Bangladesh in 2-4 days." }
+        },
+        "u2": {
+          "type": "item",
+          "settings": { "icon": "cash", "title": "Cash on delivery", "text": "Pay the courier when your gift arrives at the door." }
+        },
+        "u3": {
+          "type": "item",
+          "settings": { "icon": "gift", "title": "Free gift wrap", "text": "Box, ribbon and a message card on every order." }
+        },
+        "u4": {
+          "type": "item",
+          "settings": { "icon": "return", "title": "7-day returns", "text": "Unused and in its box? Send it back, no questions." }
+        }
+      },
+      "block_order": ["u1", "u2", "u3", "u4"],
+      "settings": {
+        "band": "none",
+        "section_width": "page-width",
+        "padding-block-start": 8,
+        "padding-block-end": 72
       }
     }
   },
-  "order": [
-    "main"
-  ]
+  "order": ["hero", "main", "promise"]
 }

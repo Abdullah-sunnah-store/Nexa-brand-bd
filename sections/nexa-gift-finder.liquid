@@ -1,0 +1,152 @@
+{%- liquid
+  assign s = section.settings
+  assign band = ''
+  if s.band == 'cream'
+    assign band = ' nexa-band'
+  elsif s.band == 'dark'
+    assign band = ' nexa-band nexa-band--dark'
+  endif
+-%}
+
+<div class="section-background{{ band }}"></div>
+
+<div
+  class="section section--{{ s.section_width }} spacing-style{{ band }}"
+  style="{% render 'spacing-style', settings: s %}"
+>
+  {%- if s.heading != blank -%}
+    <div class="nexa-head nexa-head--center">
+      <div>
+        {%- if s.eyebrow != blank -%}
+          <p class="nexa-eyebrow nexa-eyebrow--center">{{ s.eyebrow }}</p>
+        {%- endif -%}
+        <h2 class="nexa-title">{{ s.heading }}</h2>
+        {%- if s.subheading != blank -%}
+          <p class="nexa-sub">{{ s.subheading }}</p>
+        {%- endif -%}
+      </div>
+    </div>
+  {%- endif -%}
+
+  <div class="nexa-finder">
+    {%- for block in section.blocks -%}
+      {%- assign chips = block.settings.chips | newline_to_br | split: '<br />' -%}
+      <div class="nexa-finder__panel" {{ block.shopify_attributes }}>
+        <h3>{{ block.settings.title }}</h3>
+        {%- if block.settings.text != blank -%}
+          <p>{{ block.settings.text }}</p>
+        {%- endif -%}
+        <div class="nexa-chips">
+          {%- for chip in chips -%}
+            {%- liquid
+              assign parts = chip | strip | split: '|'
+              assign label = parts[0] | strip
+              assign href = parts[1] | strip | default: '/collections/all'
+            -%}
+            {%- if label != blank -%}
+              <a class="nexa-chip" href="{{ href }}">
+                {% render 'nexa-icon', name: block.settings.icon, size: 15 %}
+                {{ label }}
+              </a>
+            {%- endif -%}
+          {%- endfor -%}
+        </div>
+      </div>
+    {%- endfor -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Nexa gift finder",
+  "tag": "section",
+  "class": "nexa-section",
+  "max_blocks": 4,
+  "blocks": [
+    {
+      "type": "panel",
+      "name": "Panel",
+      "settings": [
+        { "type": "text", "id": "title", "label": "Title", "default": "Shop by recipient" },
+        { "type": "text", "id": "text", "label": "Text", "default": "Tell us who it is for and we will narrow it down." },
+        {
+          "type": "select",
+          "id": "icon",
+          "label": "Chip icon",
+          "options": [
+            { "value": "gift", "label": "Gift" },
+            { "value": "sparkle", "label": "Sparkle" },
+            { "value": "tag", "label": "Tag" },
+            { "value": "star", "label": "Star" },
+            { "value": "diamond", "label": "Diamond" },
+            { "value": "cash", "label": "Cash" }
+          ],
+          "default": "gift"
+        },
+        {
+          "type": "textarea",
+          "id": "chips",
+          "label": "Chips",
+          "info": "One per line, as Label | /link",
+          "default": "For him | /collections/for-him\nFor her | /collections/for-her\nCouples | /collections/couples\nAnniversary | /collections/anniversary\nBirthday | /collections/birthday\nEid | /collections/eid"
+        }
+      ]
+    }
+  ],
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "Not sure yet?" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Find the gift in two clicks" },
+    { "type": "text", "id": "subheading", "label": "Subheading", "default": "Pick a person or a budget — we will show you what fits." },
+    {
+      "type": "select",
+      "id": "band",
+      "label": "Background",
+      "options": [
+        { "value": "none", "label": "Page background" },
+        { "value": "cream", "label": "Cream" },
+        { "value": "dark", "label": "Ink" }
+      ],
+      "default": "cream"
+    },
+    {
+      "type": "select",
+      "id": "section_width",
+      "label": "Width",
+      "options": [
+        { "value": "page-width", "label": "Page" },
+        { "value": "full-width", "label": "Full" }
+      ],
+      "default": "page-width"
+    },
+    { "type": "header", "content": "Padding" },
+    { "type": "range", "id": "padding-block-start", "label": "Top", "min": 0, "max": 140, "step": 2, "unit": "px", "default": 64 },
+    { "type": "range", "id": "padding-block-end", "label": "Bottom", "min": 0, "max": 140, "step": 2, "unit": "px", "default": 64 }
+  ],
+  "presets": [
+    {
+      "name": "Nexa gift finder",
+      "category": "Collections",
+      "blocks": [
+        {
+          "type": "panel",
+          "settings": {
+            "title": "Shop by recipient",
+            "text": "Tell us who it is for and we will narrow it down.",
+            "icon": "gift",
+            "chips": "For him | /collections/for-him\nFor her | /collections/for-her\nCouples | /collections/couples\nAnniversary | /collections/anniversary\nBirthday | /collections/birthday\nEid | /collections/eid"
+          }
+        },
+        {
+          "type": "panel",
+          "settings": {
+            "title": "Shop by budget",
+            "text": "Good gifts at every price. Nothing padded.",
+            "icon": "cash",
+            "chips": "Under ৳1,000 | /collections/under-1000\n৳1,000 – ৳2,500 | /collections/under-2500\n৳2,500 – ৳5,000 | /collections/under-5000\nAbove ৳5,000 | /collections/premium"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

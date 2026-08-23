@@ -1,0 +1,191 @@
+{
+  "sections": {
+    "hero": {
+      "type": "nexa-page-hero",
+      "settings": {
+        "source": "page",
+        "heading": "We sell the moment, not the object",
+        "body": "<p>NexaBrand BD started because buying a decent gift in Bangladesh was harder than it should be — either overpriced imports, or something that fell apart in a month. So we built the shop we wanted to buy from.</p>",
+        "show_breadcrumbs": true,
+        "band": "none",
+        "section_width": "page-width"
+      }
+    },
+    "stats": {
+      "type": "nexa-stats",
+      "blocks": {
+        "s1": { "type": "stat", "settings": { "value": "2021", "label": "Started in Dhaka" } },
+        "s2": { "type": "stat", "settings": { "value": "12,000+", "label": "Gifts delivered" } },
+        "s3": { "type": "stat", "settings": { "value": "64", "label": "Districts covered" } },
+        "s4": { "type": "stat", "settings": { "value": "4.8/5", "label": "Average rating" } }
+      },
+      "block_order": ["s1", "s2", "s3", "s4"],
+      "settings": {
+        "band": "cream",
+        "section_width": "page-width",
+        "padding-block-start": 56,
+        "padding-block-end": 56
+      }
+    },
+    "story": {
+      "type": "nexa-split",
+      "blocks": {
+        "b1": { "type": "bullet", "settings": { "icon": "check-circle", "text": "Every supplier visited, not just emailed" } },
+        "b2": { "type": "bullet", "settings": { "icon": "shield", "text": "Each piece opened and checked before it ships" } },
+        "b3": { "type": "bullet", "settings": { "icon": "cash", "text": "Priced honestly — no inflate-then-discount games" } }
+      },
+      "block_order": ["b1", "b2", "b3"],
+      "settings": {
+        "eyebrow": "How we pick",
+        "heading": "Fewer products,",
+        "heading_accent": "chosen properly.",
+        "body": "<p>We would rather stock forty things we would give our own family than four hundred we have never held. Everything on this site has been handled, worn, or tested by someone on the team first.</p><p>When something stops meeting that bar, we drop it — even if it sells well.</p>",
+        "art": "nexa-hero.svg",
+        "button_label": "Shop the range",
+        "button_link": "shopify://collections/all",
+        "media_position": "left",
+        "band": "none",
+        "section_width": "page-width",
+        "padding-block-start": 72,
+        "padding-block-end": 64
+      }
+    },
+    "values": {
+      "type": "nexa-info-columns",
+      "blocks": {
+        "v1": {
+          "type": "column",
+          "settings": {
+            "icon": "diamond",
+            "title": "Authentic or nothing",
+            "text": "<p>Direct from the brand or its authorised distributor. If we cannot verify it, we do not list it.</p>"
+          }
+        },
+        "v2": {
+          "type": "column",
+          "settings": {
+            "icon": "gift",
+            "title": "Gift-ready by default",
+            "text": "<p>The box, the ribbon and the card are not an upsell. They come with every order, free.</p>"
+          }
+        },
+        "v3": {
+          "type": "column",
+          "settings": {
+            "icon": "headset",
+            "title": "A person, not a bot",
+            "text": "<p>WhatsApp us between 10am and 9pm and a human replies — usually inside the hour.</p>"
+          }
+        },
+        "v4": {
+          "type": "column",
+          "settings": {
+            "icon": "return",
+            "title": "Easy to undo",
+            "text": "<p>Wrong size, wrong colour, changed your mind — 7 days, and we collect it from you.</p>",
+            "accent": true
+          }
+        }
+      },
+      "block_order": ["v1", "v2", "v3", "v4"],
+      "settings": {
+        "eyebrow": "What we hold ourselves to",
+        "heading": "Four promises we do not bend",
+        "align": "center",
+        "band": "none",
+        "section_width": "page-width",
+        "padding-block-start": 32,
+        "padding-block-end": 64
+      }
+    },
+    "beauty": {
+      "type": "nexa-split",
+      "blocks": {
+        "b1": { "type": "bullet", "settings": { "icon": "sparkle", "text": "Formulated for humidity, dust and long commutes" } },
+        "b2": { "type": "bullet", "settings": { "icon": "shield", "text": "Dermatologist-tested, no parabens or sulphates" } }
+      },
+      "block_order": ["b1", "b2"],
+      "settings": {
+        "eyebrow": "NexaBeauty",
+        "heading": "Our own line,",
+        "heading_accent": "made for here.",
+        "body": "<p>We could not find skincare built for this climate, so we made it. NexaBeauty is developed with a Korean lab and blended for Bangladeshi weather — lightweight, non-greasy, and it holds up on a rickshaw at 2pm.</p>",
+        "art": "nexa-promo-beauty.svg",
+        "button_label": "Shop NexaBeauty",
+        "button_link": "/collections/beauty",
+        "media_position": "right",
+        "band": "cream",
+        "section_width": "page-width",
+        "padding-block-start": 72,
+        "padding-block-end": 72
+      }
+    },
+    "content": {
+      "type": "main-page",
+      "blocks": {
+        "page-content": { "type": "page-content", "settings": {} }
+      },
+      "block_order": ["page-content"],
+      "settings": {
+        "gap": 20,
+        "padding-block-start": 48,
+        "padding-block-end": 32
+      }
+    },
+    "reviews": {
+      "type": "nexa-testimonials",
+      "blocks": {
+        "r1": {
+          "type": "review",
+          "settings": {
+            "rating": 5,
+            "quote": "I have ordered from them four times now, for four different people. Not one complaint, and the packaging keeps getting better.",
+            "name": "Sadia K.",
+            "location": "Uttara, Dhaka"
+          }
+        },
+        "r2": {
+          "type": "review",
+          "settings": {
+            "rating": 5,
+            "quote": "Called them at 9pm about a wrong ring size. Swapped and re-delivered in two days, no charge, no argument.",
+            "name": "Imran S.",
+            "location": "Khulna"
+          }
+        },
+        "r3": {
+          "type": "review",
+          "settings": {
+            "rating": 5,
+            "quote": "The serum is the only one that has not broken me out in this weather. I have re-ordered three bottles.",
+            "name": "Farhana R.",
+            "location": "Rajshahi"
+          }
+        }
+      },
+      "block_order": ["r1", "r2", "r3"],
+      "settings": {
+        "eyebrow": "In their words",
+        "heading": "People who kept coming back",
+        "band": "none",
+        "section_width": "page-width",
+        "padding-block-start": 40,
+        "padding-block-end": 32
+      }
+    },
+    "newsletter": {
+      "type": "nexa-newsletter",
+      "settings": {
+        "eyebrow": "The list",
+        "heading": "Get 10% off your",
+        "heading_accent": "first gift.",
+        "body": "<p>New arrivals, restocks and the occasional quiet sale. One email a week at most.</p>",
+        "button_label": "Send my code",
+        "section_width": "page-width",
+        "padding-block-start": 8,
+        "padding-block-end": 80
+      }
+    }
+  },
+  "order": ["hero", "stats", "story", "values", "beauty", "content", "reviews", "newsletter"]
+}

@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 640" width="800" height="640" role="img" aria-label="NexaBeauty skincare and fragrance line-up">
+  <defs>
+    <linearGradient id="pbBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fbf6f0"/>
+      <stop offset="1" stop-color="#e9ddce"/>
+    </linearGradient>
+    <linearGradient id="pbGold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#eed7a6"/>
+      <stop offset="0.5" stop-color="#b4884b"/>
+      <stop offset="1" stop-color="#8a6533"/>
+    </linearGradient>
+    <linearGradient id="pbGlass" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.96"/>
+      <stop offset="1" stop-color="#ddcfba" stop-opacity="0.96"/>
+    </linearGradient>
+    <linearGradient id="pbAmber" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f0d9a8"/>
+      <stop offset="1" stop-color="#c99b53"/>
+    </linearGradient>
+    <linearGradient id="pbRose" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f6dcd4"/>
+      <stop offset="1" stop-color="#dda893"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="640" fill="url(#pbBg)"/>
+  <circle cx="400" cy="290" r="232" fill="#ffffff" opacity="0.45"/>
+  <circle cx="400" cy="290" r="232" fill="none" stroke="#b4884b" stroke-width="1" opacity="0.18"/>
+
+  <!-- shelf -->
+  <rect x="76" y="520" width="648" height="8" rx="4" fill="#d8c8b1"/>
+  <ellipse cx="400" cy="536" rx="316" ry="18" fill="#2b211a" opacity="0.08"/>
+
+  <!-- jar (far left) -->
+  <g>
+    <rect x="110" y="424" width="104" height="96" rx="14" fill="url(#pbGlass)"/>
+    <rect x="110" y="424" width="104" height="96" rx="14" fill="none" stroke="#cbbca6" stroke-width="1.8"/>
+    <path d="M116 466h92v40a14 14 0 0 1-14 14h-64a14 14 0 0 1-14-14z" fill="url(#pbRose)" opacity="0.8"/>
+    <rect x="100" y="396" width="124" height="32" rx="11" fill="url(#pbGold)"/>
+    <rect x="132" y="480" width="60" height="4" rx="2" fill="#b4884b"/>
+    <path d="M124 448v58" stroke="#ffffff" stroke-width="6" stroke-linecap="round" opacity="0.6"/>
+  </g>
+
+  <!-- tall serum (left-centre) -->
+  <g>
+    <rect x="246" y="292" width="96" height="228" rx="18" fill="url(#pbGlass)"/>
+    <path d="M252 372h84v130a18 18 0 0 1-18 18h-48a18 18 0 0 1-18-18z" fill="url(#pbAmber)" opacity="0.85"/>
+    <rect x="246" y="292" width="96" height="228" rx="18" fill="none" stroke="#cbbca6" stroke-width="2"/>
+    <rect x="274" y="262" width="40" height="32" rx="6" fill="#efe6d8" stroke="#cbbca6" stroke-width="1.5"/>
+    <rect x="262" y="222" width="64" height="42" rx="10" fill="url(#pbGold)"/>
+    <rect x="270" y="194" width="48" height="30" rx="13" fill="#332a21"/>
+    <rect x="262" y="418" width="64" height="52" rx="6" fill="#ffffff" opacity="0.92"/>
+    <rect x="272" y="434" width="44" height="4" rx="2" fill="#b4884b"/>
+    <rect x="272" y="446" width="30" height="3" rx="1.5" fill="#cfc3b1"/>
+    <rect x="272" y="455" width="36" height="3" rx="1.5" fill="#cfc3b1"/>
+    <path d="M262 328v168" stroke="#ffffff" stroke-width="7" stroke-linecap="round" opacity="0.62"/>
+  </g>
+
+  <!-- fragrance flacon (centre-right) -->
+  <g>
+    <rect x="392" y="336" width="128" height="184" rx="14" fill="url(#pbGlass)"/>
+    <path d="M398 396h116v106a18 18 0 0 1-18 18h-80a18 18 0 0 1-18-18z" fill="url(#pbAmber)" opacity="0.7"/>
+    <rect x="392" y="336" width="128" height="184" rx="14" fill="none" stroke="#cbbca6" stroke-width="2"/>
+    <rect x="434" y="306" width="44" height="32" rx="5" fill="#efe6d8" stroke="#cbbca6" stroke-width="1.5"/>
+    <rect x="420" y="266" width="72" height="42" rx="8" fill="url(#pbGold)"/>
+    <!-- atomiser -->
+    <rect x="492" y="278" width="34" height="18" rx="8" fill="#3a3128"/>
+    <path d="M526 287c14-6 26-2 30 8" fill="none" stroke="#3a3128" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="562" cy="302" r="13" fill="#3a3128"/>
+    <rect x="414" y="424" width="84" height="58" rx="6" fill="#ffffff" opacity="0.92"/>
+    <rect x="428" y="442" width="56" height="5" rx="2.5" fill="#b4884b"/>
+    <rect x="428" y="456" width="38" height="3" rx="1.5" fill="#cfc3b1"/>
+    <path d="M410 372v138" stroke="#ffffff" stroke-width="8" stroke-linecap="round" opacity="0.6"/>
+  </g>
+
+  <!-- lipstick (right) -->
+  <g>
+    <rect x="590" y="422" width="52" height="98" rx="9" fill="#2f271f"/>
+    <rect x="590" y="422" width="52" height="26" rx="9" fill="url(#pbGold)"/>
+    <rect x="598" y="358" width="36" height="66" rx="7" fill="url(#pbGold)"/>
+    <path d="M604 358h24v-30l-24 16z" fill="#c4685f"/>
+    <path d="M596 448v56" stroke="#ffffff" stroke-width="4" stroke-linecap="round" opacity="0.2"/>
+  </g>
+
+  <!-- compact (far right) -->
+  <g>
+    <rect x="662" y="470" width="86" height="50" rx="14" fill="url(#pbGlass)"/>
+    <rect x="662" y="470" width="86" height="50" rx="14" fill="none" stroke="#cbbca6" stroke-width="1.6"/>
+    <rect x="656" y="452" width="98" height="22" rx="9" fill="url(#pbGold)"/>
+    <circle cx="705" cy="495" r="11" fill="none" stroke="#b4884b" stroke-width="1.6" opacity="0.8"/>
+  </g>
+
+  <!-- droplets + sparkles -->
+  <path d="M604 200c0 12-9 21-21 21s-21-9-21-21 21-38 21-38 21 26 21 38z" fill="#b4884b" opacity="0.28"/>
+  <g fill="#b4884b">
+    <path d="M180 224l6 18 18 6-18 6-6 18-6-18-18-6 18-6z" opacity="0.6"/>
+    <path d="M672 140l4.5 13.5 13.5 4.5-13.5 4.5-4.5 13.5-4.5-13.5-13.5-4.5 13.5-4.5z" opacity="0.5"/>
+    <path d="M382 152l4 12 12 4-12 4-4 12-4-12-12-4 12-4z" opacity="0.45"/>
+  </g>
+</svg>

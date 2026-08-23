@@ -1,0 +1,192 @@
+{%- liquid
+  assign s = section.settings
+  assign band = ''
+  if s.band == 'cream'
+    assign band = ' nexa-band'
+  elsif s.band == 'dark'
+    assign band = ' nexa-band nexa-band--dark'
+  endif
+-%}
+
+<div class="section-background{{ band }}"></div>
+
+<div
+  class="section section--{{ s.section_width }} spacing-style{{ band }}"
+  style="{% render 'spacing-style', settings: s %}"
+>
+  <div class="nexa-split{% if s.media_position == 'right' %} nexa-split--flip{% endif %}">
+    <div class="nexa-split__art">
+      {%- if s.image != blank -%}
+        {{
+          s.image
+          | image_url: width: 1200
+          | image_tag: widths: '400,600,800,1200', sizes: '(max-width: 899px) 100vw, 50vw', loading: 'lazy', alt: s.image.alt | default: s.heading
+        }}
+      {%- else -%}
+        <img
+          src="{{ s.art | asset_url }}"
+          alt="{{ s.heading | escape }}"
+          width="800"
+          height="640"
+          loading="lazy"
+        >
+      {%- endif -%}
+    </div>
+
+    <div class="nexa-split__body">
+      {%- if s.eyebrow != blank -%}
+        <p class="nexa-eyebrow">{{ s.eyebrow }}</p>
+      {%- endif -%}
+
+      {%- if s.heading != blank -%}
+        <h2 class="nexa-title">
+          {{ s.heading }}
+          {%- if s.heading_accent != blank %} <em>{{ s.heading_accent }}</em>{% endif -%}
+        </h2>
+      {%- endif -%}
+
+      {%- if s.body != blank -%}
+        <div class="nexa-sub">{{ s.body }}</div>
+      {%- endif -%}
+
+      {%- if section.blocks.size > 0 -%}
+        <ul class="nexa-split__list">
+          {%- for block in section.blocks -%}
+            <li {{ block.shopify_attributes }}>
+              {% render 'nexa-icon', name: block.settings.icon, size: 17 %}
+              <span>{{ block.settings.text }}</span>
+            </li>
+          {%- endfor -%}
+        </ul>
+      {%- endif -%}
+
+      {%- if s.button_label != blank or s.button_2_label != blank -%}
+        <div class="nexa-actions">
+          {%- if s.button_label != blank -%}
+            <a class="nexa-btn" href="{{ s.button_link | default: '#' }}">
+              {{ s.button_label }}
+              {% render 'nexa-icon', name: 'arrow-right', size: 17 %}
+            </a>
+          {%- endif -%}
+          {%- if s.button_2_label != blank -%}
+            <a class="nexa-btn nexa-btn--ghost" href="{{ s.button_2_link | default: '#' }}">{{ s.button_2_label }}</a>
+          {%- endif -%}
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Nexa split promo",
+  "tag": "section",
+  "class": "nexa-section",
+  "max_blocks": 6,
+  "blocks": [
+    {
+      "type": "bullet",
+      "name": "Bullet",
+      "settings": [
+        {
+          "type": "select",
+          "id": "icon",
+          "label": "Icon",
+          "options": [
+            { "value": "check-circle", "label": "Check" },
+            { "value": "gift", "label": "Gift" },
+            { "value": "truck", "label": "Delivery truck" },
+            { "value": "shield", "label": "Shield" },
+            { "value": "sparkle", "label": "Sparkle" },
+            { "value": "star", "label": "Star" },
+            { "value": "diamond", "label": "Diamond" },
+            { "value": "tag", "label": "Tag" },
+            { "value": "box", "label": "Box" },
+            { "value": "clock", "label": "Clock" }
+          ],
+          "default": "check-circle"
+        },
+        { "type": "text", "id": "text", "label": "Text", "default": "Hand-wrapped in a Nexa gift box" }
+      ]
+    }
+  ],
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "Gift sets" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "One box." },
+    { "type": "text", "id": "heading_accent", "label": "Heading accent", "default": "Nothing left to plan." },
+    {
+      "type": "richtext",
+      "id": "body",
+      "label": "Body",
+      "default": "<p>Pair a wallet with a watch, or a ring with a fragrance. Every set arrives wrapped, ribboned and ready to hand over — with a card you can write yourself.</p>"
+    },
+    { "type": "image_picker", "id": "image", "label": "Image", "info": "Leave empty to use the bundled illustration." },
+    {
+      "type": "select",
+      "id": "art",
+      "label": "Bundled illustration",
+      "options": [
+        { "value": "nexa-promo-giftsets.svg", "label": "Gift sets" },
+        { "value": "nexa-promo-beauty.svg", "label": "Beauty" },
+        { "value": "nexa-hero.svg", "label": "Flat lay" },
+        { "value": "nexa-cat-wallets.svg", "label": "Wallets" },
+        { "value": "nexa-cat-watches.svg", "label": "Watches" },
+        { "value": "nexa-cat-rings.svg", "label": "Rings" },
+        { "value": "nexa-cat-sunglasses.svg", "label": "Sunglasses" }
+      ],
+      "default": "nexa-promo-giftsets.svg"
+    },
+    { "type": "header", "content": "Buttons" },
+    { "type": "text", "id": "button_label", "label": "Primary button", "default": "Shop gift sets" },
+    { "type": "url", "id": "button_link", "label": "Primary link" },
+    { "type": "text", "id": "button_2_label", "label": "Secondary button" },
+    { "type": "url", "id": "button_2_link", "label": "Secondary link" },
+    { "type": "header", "content": "Layout" },
+    {
+      "type": "select",
+      "id": "media_position",
+      "label": "Image position",
+      "options": [
+        { "value": "left", "label": "Left" },
+        { "value": "right", "label": "Right" }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "select",
+      "id": "band",
+      "label": "Background",
+      "options": [
+        { "value": "none", "label": "Page background" },
+        { "value": "cream", "label": "Cream" },
+        { "value": "dark", "label": "Ink" }
+      ],
+      "default": "none"
+    },
+    {
+      "type": "select",
+      "id": "section_width",
+      "label": "Width",
+      "options": [
+        { "value": "page-width", "label": "Page" },
+        { "value": "full-width", "label": "Full" }
+      ],
+      "default": "page-width"
+    },
+    { "type": "header", "content": "Padding" },
+    { "type": "range", "id": "padding-block-start", "label": "Top", "min": 0, "max": 140, "step": 2, "unit": "px", "default": 60 },
+    { "type": "range", "id": "padding-block-end", "label": "Bottom", "min": 0, "max": 140, "step": 2, "unit": "px", "default": 60 }
+  ],
+  "presets": [
+    {
+      "name": "Nexa split promo",
+      "category": "Storytelling",
+      "blocks": [
+        { "type": "bullet", "settings": { "icon": "gift", "text": "Hand-wrapped in a Nexa gift box" } },
+        { "type": "bullet", "settings": { "icon": "check-circle", "text": "Handwritten message card included" } },
+        { "type": "bullet", "settings": { "icon": "truck", "text": "Ships the same day before 4pm" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

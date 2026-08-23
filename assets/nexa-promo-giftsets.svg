@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 640" width="800" height="640" role="img" aria-label="Curated gift sets ready to give">
+  <defs>
+    <linearGradient id="pgBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f7f0e4"/>
+      <stop offset="1" stop-color="#e4d8c6"/>
+    </linearGradient>
+    <linearGradient id="pgGold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#eed7a6"/>
+      <stop offset="0.5" stop-color="#b4884b"/>
+      <stop offset="1" stop-color="#8a6533"/>
+    </linearGradient>
+    <linearGradient id="pgInk" x1="0" y1="0" x2="0.7" y2="1">
+      <stop offset="0" stop-color="#2f271f"/>
+      <stop offset="1" stop-color="#14100c"/>
+    </linearGradient>
+    <linearGradient id="pgCream" x1="0" y1="0" x2="0.6" y2="1">
+      <stop offset="0" stop-color="#fdfaf5"/>
+      <stop offset="1" stop-color="#e8dccb"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="640" fill="url(#pgBg)"/>
+  <circle cx="400" cy="300" r="238" fill="#ffffff" opacity="0.4"/>
+  <circle cx="400" cy="300" r="238" fill="none" stroke="#b4884b" stroke-width="1" opacity="0.2"/>
+  <ellipse cx="400" cy="540" rx="290" ry="26" fill="#2b211a" opacity="0.1"/>
+
+  <!-- left cream box -->
+  <g>
+    <rect x="112" y="368" width="172" height="152" rx="12" fill="url(#pgCream)"/>
+    <rect x="112" y="368" width="172" height="152" rx="12" fill="none" stroke="#d6c8b3" stroke-width="1.5"/>
+    <rect x="178" y="368" width="34" height="152" fill="url(#pgGold)" opacity="0.9"/>
+    <rect x="100" y="338" width="196" height="40" rx="10" fill="#f2e9db" stroke="#d6c8b3" stroke-width="1.5"/>
+    <rect x="178" y="338" width="34" height="40" fill="url(#pgGold)" opacity="0.9"/>
+    <path d="M195 338c-9-17-33-34-52-26-15 7-13 26 5 30 15 3 35-1 47-4z" fill="url(#pgGold)"/>
+    <path d="M195 338c9-17 33-34 52-26 15 7 13 26-5 30-15 3-35-1-47-4z" fill="url(#pgGold)"/>
+    <ellipse cx="195" cy="338" rx="17" ry="14" fill="#d8b878"/>
+  </g>
+
+  <!-- centre tall ink box -->
+  <g>
+    <rect x="308" y="264" width="196" height="256" rx="14" fill="url(#pgInk)"/>
+    <rect x="386" y="264" width="40" height="256" fill="url(#pgGold)"/>
+    <rect x="294" y="226" width="224" height="46" rx="12" fill="#3a3128"/>
+    <rect x="386" y="226" width="40" height="46" fill="url(#pgGold)"/>
+    <rect x="294" y="264" width="224" height="7" fill="#0e0b08" opacity="0.45"/>
+    <path d="M406 226c-11-21-40-42-64-32-18 8-16 32 6 37 18 4 43-2 58-5z" fill="url(#pgGold)"/>
+    <path d="M406 226c11-21 40-42 64-32 18 8 16 32-6 37-18 4-43-2-58-5z" fill="url(#pgGold)"/>
+    <ellipse cx="406" cy="226" rx="21" ry="17" fill="#d8b878"/>
+    <ellipse cx="401" cy="221" rx="7" ry="6" fill="#f6e8cd" opacity="0.85"/>
+    <g transform="translate(462 448)" opacity="0.9">
+      <path d="M-11 11V-11L11 11V-11" fill="none" stroke="#b4884b" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+  </g>
+
+  <!-- right small box -->
+  <g>
+    <rect x="528" y="404" width="152" height="116" rx="11" fill="url(#pgCream)"/>
+    <rect x="528" y="404" width="152" height="116" rx="11" fill="none" stroke="#d6c8b3" stroke-width="1.5"/>
+    <rect x="586" y="404" width="30" height="116" fill="url(#pgGold)" opacity="0.85"/>
+    <rect x="518" y="378" width="172" height="34" rx="9" fill="#f2e9db" stroke="#d6c8b3" stroke-width="1.5"/>
+    <rect x="586" y="378" width="30" height="34" fill="url(#pgGold)" opacity="0.85"/>
+    <path d="M601 378c-8-14-28-28-44-22-13 6-11 22 4 25 13 3 30-1 40-3z" fill="url(#pgGold)"/>
+    <path d="M601 378c8-14 28-28 44-22 13 6 11 22-4 25-13 3-30-1-40-3z" fill="url(#pgGold)"/>
+    <ellipse cx="601" cy="378" rx="14" ry="12" fill="#d8b878"/>
+  </g>
+
+  <!-- ribbon tails on centre -->
+  <path d="M386 240c-18 20-38 28-58 30l13-28z" fill="#a97c3f" opacity="0.85"/>
+  <path d="M426 240c18 20 38 28 58 30l-13-28z" fill="#a97c3f" opacity="0.85"/>
+
+  <!-- sparkles -->
+  <g fill="#b4884b">
+    <path d="M172 152l6 18 18 6-18 6-6 18-6-18-18-6 18-6z" opacity="0.65"/>
+    <path d="M648 196l4.5 13.5 13.5 4.5-13.5 4.5-4.5 13.5-4.5-13.5-13.5-4.5 13.5-4.5z" opacity="0.55"/>
+    <path d="M556 118l4 12 12 4-12 4-4 12-4-12-12-4 12-4z" opacity="0.45"/>
+  </g>
+</svg>

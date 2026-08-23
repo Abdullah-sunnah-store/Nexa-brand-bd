@@ -1,0 +1,151 @@
+{%- liquid
+  assign s = section.settings
+  assign band = ''
+  if s.band == 'cream'
+    assign band = ' nexa-band'
+  elsif s.band == 'dark'
+    assign band = ' nexa-band nexa-band--dark'
+  endif
+-%}
+
+<div class="section-background{{ band }}"></div>
+
+<div
+  class="section section--{{ s.section_width }} spacing-style{{ band }}"
+  style="{% render 'spacing-style', settings: s %}"
+>
+  {%- if s.heading != blank -%}
+    <div class="nexa-head nexa-head--center">
+      <div>
+        {%- if s.eyebrow != blank -%}
+          <p class="nexa-eyebrow nexa-eyebrow--center">{{ s.eyebrow }}</p>
+        {%- endif -%}
+        <h2 class="nexa-title">{{ s.heading }}</h2>
+        {%- if s.subheading != blank -%}
+          <p class="nexa-sub">{{ s.subheading }}</p>
+        {%- endif -%}
+      </div>
+    </div>
+  {%- endif -%}
+
+  <div class="nexa-faq">
+    {%- for block in section.blocks -%}
+      <details
+        class="nexa-faq__item"
+        {% if block.settings.open %}open{% endif %}
+        {{ block.shopify_attributes }}
+      >
+        <summary class="nexa-faq__q">
+          <span>{{ block.settings.question }}</span>
+          <span class="nexa-faq__sign" aria-hidden="true"></span>
+        </summary>
+        <div class="nexa-faq__a">{{ block.settings.answer }}</div>
+      </details>
+    {%- endfor -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Nexa FAQ",
+  "tag": "section",
+  "class": "nexa-section",
+  "max_blocks": 20,
+  "blocks": [
+    {
+      "type": "question",
+      "name": "Question",
+      "settings": [
+        { "type": "text", "id": "question", "label": "Question", "default": "How long does delivery take?" },
+        {
+          "type": "richtext",
+          "id": "answer",
+          "label": "Answer",
+          "default": "<p>Inside Dhaka, 24 to 48 hours. Anywhere else in Bangladesh, 2 to 4 working days.</p>"
+        },
+        { "type": "checkbox", "id": "open", "label": "Open by default", "default": false }
+      ]
+    }
+  ],
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "Good to know" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Questions we get every day" },
+    { "type": "text", "id": "subheading", "label": "Subheading" },
+    {
+      "type": "select",
+      "id": "band",
+      "label": "Background",
+      "options": [
+        { "value": "none", "label": "Page background" },
+        { "value": "cream", "label": "Cream" },
+        { "value": "dark", "label": "Ink" }
+      ],
+      "default": "none"
+    },
+    {
+      "type": "select",
+      "id": "section_width",
+      "label": "Width",
+      "options": [
+        { "value": "page-width", "label": "Page" },
+        { "value": "full-width", "label": "Full" }
+      ],
+      "default": "page-width"
+    },
+    { "type": "header", "content": "Padding" },
+    { "type": "range", "id": "padding-block-start", "label": "Top", "min": 0, "max": 140, "step": 2, "unit": "px", "default": 64 },
+    { "type": "range", "id": "padding-block-end", "label": "Bottom", "min": 0, "max": 140, "step": 2, "unit": "px", "default": 64 }
+  ],
+  "presets": [
+    {
+      "name": "Nexa FAQ",
+      "category": "Text",
+      "blocks": [
+        {
+          "type": "question",
+          "settings": {
+            "question": "How long does delivery take?",
+            "answer": "<p>Inside Dhaka, 24 to 48 hours. Anywhere else in Bangladesh, 2 to 4 working days. You get an SMS with the courier's number as soon as the parcel leaves us.</p>",
+            "open": true
+          }
+        },
+        {
+          "type": "question",
+          "settings": {
+            "question": "Can I pay cash on delivery?",
+            "answer": "<p>Yes, everywhere in Bangladesh. You can also pay with bKash, Nagad, Rocket or any Visa / Mastercard at checkout. Prepaid orders ship first.</p>"
+          }
+        },
+        {
+          "type": "question",
+          "settings": {
+            "question": "Is the gift wrapping really free?",
+            "answer": "<p>It is. Every order goes out in a Nexa box with a ribbon and a blank message card. Add your message in the order notes at checkout and we will write it for you.</p>"
+          }
+        },
+        {
+          "type": "question",
+          "settings": {
+            "question": "What if it does not fit, or they do not like it?",
+            "answer": "<p>Send it back within 7 days, unused and in its original box, and we will exchange it or refund you. Ring sizing exchanges are free — see our <a href=\"/pages/faq\">size guide</a>.</p>"
+          }
+        },
+        {
+          "type": "question",
+          "settings": {
+            "question": "Are the watches and sunglasses authentic?",
+            "answer": "<p>Every piece is sourced direct from the brand or its authorised distributor, then checked by hand before it ships. Anything that fails the check never reaches you.</p>"
+          }
+        },
+        {
+          "type": "question",
+          "settings": {
+            "question": "Can you deliver on a specific date?",
+            "answer": "<p>Yes — leave the date in the order notes. For birthdays and anniversaries we hold the parcel and hand it to the courier so it lands on the morning you asked for.</p>"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

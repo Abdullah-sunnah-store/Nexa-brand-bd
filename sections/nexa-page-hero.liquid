@@ -1,0 +1,103 @@
+{%- liquid
+  assign s = section.settings
+  assign band = ''
+  if s.band == 'cream'
+    assign band = ' nexa-band'
+  elsif s.band == 'dark'
+    assign band = ' nexa-band nexa-band--dark'
+  endif
+
+  assign title = s.heading
+  if title == blank
+    case s.source
+      when 'page'
+        assign title = page.title
+      when 'collection'
+        assign title = collection.title
+      when 'blog'
+        assign title = blog.title
+      when 'article'
+        assign title = article.title
+    endcase
+  endif
+
+  assign body = s.body
+  if body == blank and s.source == 'collection'
+    assign body = collection.description
+  endif
+-%}
+
+<div class="section-background{{ band }}"></div>
+
+<div
+  class="section section--{{ s.section_width }} spacing-style{{ band }}"
+  style="{% render 'spacing-style', settings: s %}"
+>
+  <div class="nexa-phero">
+    {%- if s.show_breadcrumbs -%}
+      <nav class="nexa-crumbs" aria-label="Breadcrumb">
+        <a href="{{ routes.root_url }}">Home</a>
+        <span aria-hidden="true">/</span>
+        <span>{{ title }}</span>
+      </nav>
+    {%- endif -%}
+
+    <h1 class="nexa-phero__title">{{ title | default: 'NexaBrand BD' }}</h1>
+
+    {%- if body != blank -%}
+      <div class="nexa-phero__text">{{ body }}</div>
+    {%- endif -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Nexa page hero",
+  "tag": "section",
+  "class": "nexa-section",
+  "settings": [
+    {
+      "type": "select",
+      "id": "source",
+      "label": "Title source",
+      "info": "Used when Heading is left empty.",
+      "options": [
+        { "value": "custom", "label": "Custom only" },
+        { "value": "page", "label": "Page title" },
+        { "value": "collection", "label": "Collection title" },
+        { "value": "blog", "label": "Blog title" },
+        { "value": "article", "label": "Article title" }
+      ],
+      "default": "page"
+    },
+    { "type": "text", "id": "heading", "label": "Heading" },
+    { "type": "richtext", "id": "body", "label": "Body" },
+    { "type": "checkbox", "id": "show_breadcrumbs", "label": "Show breadcrumbs", "default": true },
+    {
+      "type": "select",
+      "id": "band",
+      "label": "Background",
+      "options": [
+        { "value": "none", "label": "Page background" },
+        { "value": "cream", "label": "Cream" },
+        { "value": "dark", "label": "Ink" }
+      ],
+      "default": "none"
+    },
+    {
+      "type": "select",
+      "id": "section_width",
+      "label": "Width",
+      "options": [
+        { "value": "page-width", "label": "Page" },
+        { "value": "full-width", "label": "Full" }
+      ],
+      "default": "page-width"
+    },
+    { "type": "header", "content": "Padding" },
+    { "type": "range", "id": "padding-block-start", "label": "Top", "min": 0, "max": 140, "step": 2, "unit": "px", "default": 0 },
+    { "type": "range", "id": "padding-block-end", "label": "Bottom", "min": 0, "max": 140, "step": 2, "unit": "px", "default": 0 }
+  ],
+  "presets": [{ "name": "Nexa page hero", "category": "Banners" }]
+}
+{% endschema %}

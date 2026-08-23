@@ -1,285 +1,554 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */{
+{
   "sections": {
-    "hero_jVaWmY": {
-      "type": "hero",
-      "blocks": {
-        "text_YLPk4p": {
-          "type": "text",
-          "name": "t:names.heading",
-          "settings": {
-            "text": "<p>Browse our latest products</p>",
-            "text_color": "{{ settings.color_palette.background }}",
-            "width": "fit-content",
-            "max_width": "normal",
-            "alignment": "left",
-            "type_preset": "h2",
-            "font": "var(--font-body--family)",
-            "font_size": "1rem",
-            "line_height": "normal",
-            "letter_spacing": "normal",
-            "case": "none",
-            "wrap": "pretty",
-            "background": false,
-            "background_color": "#00000026",
-            "corner_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {}
-        },
-        "button_H9gpTf": {
-          "type": "button",
-          "name": "t:names.button",
-          "settings": {
-            "label": "Shop all",
-            "link": "shopify://collections/all",
-            "open_in_new_tab": false,
-            "style_class": "button-custom",
-            "custom_button_background": "rgba(0,0,0,0)",
-            "custom_button_text": "{{ settings.color_palette.background }}",
-            "custom_button_border": "{{ settings.color_palette.background }}",
-            "width": "fit-content",
-            "custom_width": 100,
-            "width_mobile": "fit-content",
-            "custom_width_mobile": 100
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "text_YLPk4p",
-        "button_H9gpTf"
-      ],
-      "name": "t:names.hero",
+    "hero": {
+      "type": "nexa-hero",
       "settings": {
-        "media_type_1": "image",
-        "media_type_2": "image",
-        "stack_media_on_mobile": false,
-        "custom_mobile_media": false,
-        "media_type_1_mobile": "image",
-        "media_type_2_mobile": "image",
-        "open_in_new_tab": false,
-        "content_direction": "column",
-        "vertical_on_mobile": true,
-        "horizontal_alignment": "space-between",
-        "vertical_alignment": "flex-end",
-        "align_baseline": true,
-        "horizontal_alignment_flex_direction_column": "center",
-        "vertical_alignment_flex_direction_column": "flex-end",
-        "gap": 24,
+        "eyebrow": "Gifts for every occasion",
+        "heading": "Gifts they will",
+        "heading_accent": "actually remember.",
+        "body": "<p>Wallets, watches, rings, sunglasses and beauty — hand-picked, gift-boxed and delivered across Bangladesh. Cash on delivery available nationwide.</p>",
+        "badge": "Free gift wrap",
+        "button_label": "Shop all gifts",
+        "button_link": "shopify://collections/all",
+        "button_2_label": "Explore gift sets",
+        "button_2_link": "/collections/gift-sets",
+        "meta_1_icon": "truck",
+        "meta_1": "Free delivery over ৳2,000",
+        "meta_2_icon": "cash",
+        "meta_2": "Cash on delivery",
+        "meta_3_icon": "return",
+        "meta_3": "7-day easy returns",
+        "band": "none",
         "section_width": "page-width",
-        "section_height": "medium",
-        "section_height_custom": 50,
-        "background_color": "rgba(0,0,0,0)",
-        "toggle_overlay": true,
-        "overlay_color": "#12121266",
-        "overlay_style": "solid",
-        "gradient_direction": "to bottom",
-        "blurred_reflection": false,
-        "reflection_opacity": 75,
-        "padding-block-start": 100,
-        "padding-block-end": 72
+        "padding-block-start": 8,
+        "padding-block-end": 8
       }
     },
-    "product_list_fa6P9H": {
+    "promise_bar": {
+      "type": "nexa-usp-bar",
+      "blocks": {
+        "u1": {
+          "type": "item",
+          "settings": {
+            "icon": "truck",
+            "title": "Nationwide delivery",
+            "text": "Dhaka in 24-48 hrs, rest of Bangladesh in 2-4 days."
+          }
+        },
+        "u2": {
+          "type": "item",
+          "settings": {
+            "icon": "cash",
+            "title": "Cash on delivery",
+            "text": "Pay the courier when your gift arrives at the door."
+          }
+        },
+        "u3": {
+          "type": "item",
+          "settings": {
+            "icon": "return",
+            "title": "7-day returns",
+            "text": "Unused and in its box? Send it back, no questions."
+          }
+        },
+        "u4": {
+          "type": "item",
+          "settings": {
+            "icon": "shield",
+            "title": "100% authentic",
+            "text": "Sourced direct. Every piece checked before it ships."
+          }
+        }
+      },
+      "block_order": ["u1", "u2", "u3", "u4"],
+      "settings": {
+        "band": "none",
+        "section_width": "page-width",
+        "padding-block-start": 16,
+        "padding-block-end": 44
+      }
+    },
+    "categories": {
+      "type": "nexa-categories",
+      "blocks": {
+        "c1": {
+          "type": "category",
+          "settings": {
+            "collection": "wallets",
+            "title": "Wallets",
+            "caption": "Leather, slim & RFID",
+            "art": "nexa-cat-wallets.svg"
+          }
+        },
+        "c2": {
+          "type": "category",
+          "settings": {
+            "collection": "watches",
+            "title": "Watches",
+            "caption": "Classic & everyday",
+            "art": "nexa-cat-watches.svg"
+          }
+        },
+        "c3": {
+          "type": "category",
+          "settings": {
+            "collection": "rings",
+            "title": "Rings",
+            "caption": "Couple & statement",
+            "art": "nexa-cat-rings.svg"
+          }
+        },
+        "c4": {
+          "type": "category",
+          "settings": {
+            "collection": "sunglasses",
+            "title": "Sunglasses",
+            "caption": "UV400 polarised",
+            "art": "nexa-cat-sunglasses.svg"
+          }
+        },
+        "c5": {
+          "type": "category",
+          "settings": {
+            "collection": "beauty",
+            "title": "Beauty",
+            "caption": "Skincare & fragrance",
+            "art": "nexa-cat-beauty.svg"
+          }
+        },
+        "c6": {
+          "type": "category",
+          "settings": {
+            "collection": "gift-sets",
+            "title": "Gift sets",
+            "caption": "Ready to give",
+            "tag": "Best value",
+            "art": "nexa-cat-gift-sets.svg"
+          }
+        }
+      },
+      "block_order": ["c1", "c2", "c3", "c4", "c5", "c6"],
+      "settings": {
+        "eyebrow": "Shop by category",
+        "heading": "Six ways to say you thought about it",
+        "link_label": "View all categories",
+        "link_url": "/collections",
+        "align": "split",
+        "columns": 3,
+        "show_count": false,
+        "band": "none",
+        "section_width": "page-width",
+        "padding-block-start": 40,
+        "padding-block-end": 64
+      }
+    },
+    "bestsellers": {
       "type": "product-list",
       "blocks": {
         "static-header": {
           "type": "_product-list-content",
-          "name": "t:names.header",
           "static": true,
           "settings": {
             "content_direction": "row",
-            "vertical_on_mobile": false,
             "horizontal_alignment": "space-between",
             "vertical_alignment": "flex-end",
-            "align_baseline": true,
-            "horizontal_alignment_flex_direction_column": "flex-start",
-            "vertical_alignment_flex_direction_column": "center",
-            "gap": 12,
-            "width": "fill",
-            "custom_width": 100,
-            "width_mobile": "fill",
-            "custom_width_mobile": 100,
-            "height": "fit",
-            "custom_height": 100,
-            "background_media": "none",
-            "video_position": "cover",
-            "background_image_position": "cover",
-            "border": "none",
-            "border_width": 1,
-            "border_opacity": 100,
-            "border_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
+            "gap": 12
           },
           "blocks": {
-            "product_list_text_YFtzcL": {
+            "heading": {
               "type": "_product-list-text",
-              "name": "t:names.collection_title",
               "settings": {
-                "text": "<h3>{{ closest.collection.title }}</h3>",
-                "width": "fit-content",
-                "max_width": "normal",
-                "alignment": "left",
-                "type_preset": "h4",
-                "font": "var(--font-body--family)",
-                "line_height": "normal",
-                "letter_spacing": "normal",
-                "case": "none",
-                "wrap": "pretty",
-                "background": false,
-                "background_color": "#00000026",
-                "corner_radius": 0,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
+                "text": "<h3>Best sellers this month</h3>",
+                "type_preset": "h3",
+                "font": "var(--font-heading--family)",
+                "alignment": "left"
+              }
             },
-            "product_list_button_MWeP9V": {
+            "viewall": {
               "type": "_product-list-button",
-              "name": "t:names.product_list_button",
               "settings": {
                 "label": "View all",
-                "open_in_new_tab": false,
-                "style_class": "link",
-                "width": "fit-content",
-                "custom_width": 100,
-                "width_mobile": "fit-content",
-                "custom_width_mobile": 100
-              },
-              "blocks": {}
+                "style_class": "link"
+              }
             }
           },
-          "block_order": [
-            "product_list_text_YFtzcL",
-            "product_list_button_MWeP9V"
-          ]
+          "block_order": ["heading", "viewall"]
         },
         "static-product-card": {
           "type": "_product-card",
-          "name": "t:names.product_card",
           "static": true,
           "settings": {
-            "product_card_gap": 4,
-            "border": "none",
-            "border_width": 1,
-            "border_opacity": 100,
-            "border_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
+            "product_card_gap": 6
           },
           "blocks": {
-            "product_card_gallery_677WP3": {
+            "gallery": {
               "type": "_product-card-gallery",
-              "name": "t:names.product_card_media",
               "settings": {
-                "image_ratio": "adapt",
-                "border": "none",
-                "border_width": 1,
-                "border_opacity": 100,
-                "border_radius": 0,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
+                "image_ratio": "portrait",
+                "border_radius": 12
+              }
             },
-            "product_title_YXxMTj": {
+            "title": {
               "type": "product-title",
-              "name": "t:names.product_title",
               "settings": {
                 "width": "100%",
-                "max_width": "normal",
                 "alignment": "left",
                 "type_preset": "rte",
-                "font": "var(--font-body--family)",
-                "font_size": "1rem",
-                "line_height": "normal",
-                "letter_spacing": "normal",
-                "case": "none",
-                "wrap": "pretty",
-                "background": false,
-                "background_color": "#00000026",
-                "corner_radius": 0,
-                "padding-block-start": 4,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
+                "font_size": "0.9375rem",
+                "padding-block-start": 8
+              }
             },
-            "price_JQzVV4": {
+            "price": {
               "type": "price",
-              "name": "t:names.product_price",
               "settings": {
                 "show_sale_price_first": true,
-                "show_installments": false,
-                "show_tax_info": false,
                 "type_preset": "h6",
-                "width": "100%",
                 "alignment": "left",
-                "font": "var(--font-body--family)",
-                "font_size": "1rem",
-                "line_height": "normal",
-                "letter_spacing": "normal",
-                "case": "none",
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
+                "font_size": "0.9375rem"
+              }
             }
           },
-          "block_order": [
-            "product_card_gallery_677WP3",
-            "product_title_YXxMTj",
-            "price_JQzVV4"
-          ]
+          "block_order": ["gallery", "title", "price"]
         }
       },
-      "name": "t:names.product_list",
       "settings": {
-        "collection": "all",
+        "collection": "best-sellers",
         "layout_type": "grid",
-        "carousel_on_mobile": false,
+        "carousel_on_mobile": true,
         "max_products": 8,
         "columns": 4,
         "mobile_columns": "2",
-        "mobile_card_size": "60cqw",
-        "columns_gap": 8,
-        "rows_gap": 24,
-        "icons_style": "arrow",
-        "icons_shape": "none",
+        "columns_gap": 16,
+        "rows_gap": 32,
         "section_width": "page-width",
-        "horizontal_alignment": "flex-start",
         "gap": 28,
-        "background_color": "{{ settings.color_palette.background }}",
-        "padding-block-start": 48,
-        "padding-block-end": 48
+        "padding-block-start": 24,
+        "padding-block-end": 56
+      }
+    },
+    "split_giftsets": {
+      "type": "nexa-split",
+      "blocks": {
+        "b1": {
+          "type": "bullet",
+          "settings": { "icon": "gift", "text": "Hand-wrapped in a rigid Nexa gift box" }
+        },
+        "b2": {
+          "type": "bullet",
+          "settings": { "icon": "check-circle", "text": "Message card written in your words" }
+        },
+        "b3": {
+          "type": "bullet",
+          "settings": { "icon": "truck", "text": "Ships same day on orders before 4pm" }
+        },
+        "b4": {
+          "type": "bullet",
+          "settings": { "icon": "tag", "text": "Sets cost less than buying the pieces apart" }
+        }
+      },
+      "block_order": ["b1", "b2", "b3", "b4"],
+      "settings": {
+        "eyebrow": "Gift sets",
+        "heading": "One box.",
+        "heading_accent": "Nothing left to plan.",
+        "body": "<p>Pair a wallet with a watch, or a ring with a fragrance. Every set arrives wrapped, ribboned and ready to hand over — no wrapping paper, no last-minute shop run.</p>",
+        "art": "nexa-promo-giftsets.svg",
+        "button_label": "Shop gift sets",
+        "button_link": "/collections/gift-sets",
+        "media_position": "left",
+        "band": "cream",
+        "section_width": "page-width",
+        "padding-block-start": 64,
+        "padding-block-end": 64
+      }
+    },
+    "new_arrivals": {
+      "type": "product-list",
+      "blocks": {
+        "static-header": {
+          "type": "_product-list-content",
+          "static": true,
+          "settings": {
+            "content_direction": "row",
+            "horizontal_alignment": "space-between",
+            "vertical_alignment": "flex-end",
+            "gap": 12
+          },
+          "blocks": {
+            "heading": {
+              "type": "_product-list-text",
+              "settings": {
+                "text": "<h3>Just landed</h3>",
+                "type_preset": "h3",
+                "font": "var(--font-heading--family)",
+                "alignment": "left"
+              }
+            },
+            "viewall": {
+              "type": "_product-list-button",
+              "settings": {
+                "label": "View all",
+                "style_class": "link"
+              }
+            }
+          },
+          "block_order": ["heading", "viewall"]
+        },
+        "static-product-card": {
+          "type": "_product-card",
+          "static": true,
+          "settings": {
+            "product_card_gap": 6
+          },
+          "blocks": {
+            "gallery": {
+              "type": "_product-card-gallery",
+              "settings": {
+                "image_ratio": "portrait",
+                "border_radius": 12
+              }
+            },
+            "title": {
+              "type": "product-title",
+              "settings": {
+                "width": "100%",
+                "alignment": "left",
+                "type_preset": "rte",
+                "font_size": "0.9375rem",
+                "padding-block-start": 8
+              }
+            },
+            "price": {
+              "type": "price",
+              "settings": {
+                "show_sale_price_first": true,
+                "type_preset": "h6",
+                "alignment": "left",
+                "font_size": "0.9375rem"
+              }
+            }
+          },
+          "block_order": ["gallery", "title", "price"]
+        }
+      },
+      "settings": {
+        "collection": "new-arrivals",
+        "layout_type": "grid",
+        "carousel_on_mobile": true,
+        "max_products": 4,
+        "columns": 4,
+        "mobile_columns": "2",
+        "columns_gap": 16,
+        "rows_gap": 32,
+        "section_width": "page-width",
+        "gap": 28,
+        "padding-block-start": 64,
+        "padding-block-end": 24
+      }
+    },
+    "gift_finder": {
+      "type": "nexa-gift-finder",
+      "blocks": {
+        "p1": {
+          "type": "panel",
+          "settings": {
+            "title": "Shop by recipient",
+            "text": "Tell us who it is for and we will narrow it down.",
+            "icon": "gift",
+            "chips": "For him | /collections/for-him\nFor her | /collections/for-her\nCouples | /collections/couples\nAnniversary | /collections/anniversary\nBirthday | /collections/birthday\nEid | /collections/eid"
+          }
+        },
+        "p2": {
+          "type": "panel",
+          "settings": {
+            "title": "Shop by budget",
+            "text": "Good gifts at every price. Nothing padded.",
+            "icon": "cash",
+            "chips": "Under ৳1,000 | /collections/under-1000\n৳1,000 – ৳2,500 | /collections/under-2500\n৳2,500 – ৳5,000 | /collections/under-5000\nAbove ৳5,000 | /collections/premium"
+          }
+        }
+      },
+      "block_order": ["p1", "p2"],
+      "settings": {
+        "eyebrow": "Not sure yet?",
+        "heading": "Find the gift in two clicks",
+        "subheading": "Pick a person or a budget — we will show you what fits.",
+        "band": "cream",
+        "section_width": "page-width",
+        "padding-block-start": 64,
+        "padding-block-end": 64
+      }
+    },
+    "split_beauty": {
+      "type": "nexa-split",
+      "blocks": {
+        "b1": {
+          "type": "bullet",
+          "settings": { "icon": "sparkle", "text": "K-beauty inspired formulas, made for this climate" }
+        },
+        "b2": {
+          "type": "bullet",
+          "settings": { "icon": "shield", "text": "Dermatologist-tested, no parabens or sulphates" }
+        },
+        "b3": {
+          "type": "bullet",
+          "settings": { "icon": "check-circle", "text": "Batch codes you can verify on the box" }
+        }
+      },
+      "block_order": ["b1", "b2", "b3"],
+      "settings": {
+        "eyebrow": "NexaBeauty",
+        "heading": "Skincare that survives",
+        "heading_accent": "a Dhaka summer.",
+        "body": "<p>Lightweight serums, sunscreens that do not turn you grey, and fragrance that lasts past lunch. Built for humidity, dust and long commutes.</p>",
+        "art": "nexa-promo-beauty.svg",
+        "button_label": "Shop beauty",
+        "button_link": "/collections/beauty",
+        "button_2_label": "Build a routine",
+        "button_2_link": "/collections/skincare-sets",
+        "media_position": "right",
+        "band": "none",
+        "section_width": "page-width",
+        "padding-block-start": 72,
+        "padding-block-end": 64
+      }
+    },
+    "reviews": {
+      "type": "nexa-testimonials",
+      "blocks": {
+        "r1": {
+          "type": "review",
+          "settings": {
+            "rating": 5,
+            "quote": "Bought the watch and wallet set for my brother's wedding. He thought I spent three times what I did. The gift box does a lot of work.",
+            "name": "Rifat H.",
+            "location": "Chattogram"
+          }
+        },
+        "r2": {
+          "type": "review",
+          "settings": {
+            "rating": 5,
+            "quote": "Ordered at 11pm, the courier called me the next afternoon. Paid cash at the door. The ring was exactly the size on the chart.",
+            "name": "Nusrat J.",
+            "location": "Dhanmondi, Dhaka"
+          }
+        },
+        "r3": {
+          "type": "review",
+          "settings": {
+            "rating": 5,
+            "quote": "The sunglasses are genuinely polarised, not the fake kind. I checked against my car screen. Third order from them now.",
+            "name": "Tanvir A.",
+            "location": "Sylhet"
+          }
+        }
+      },
+      "block_order": ["r1", "r2", "r3"],
+      "settings": {
+        "eyebrow": "Loved by 12,000+ gift givers",
+        "heading": "What people say after they hand it over",
+        "band": "none",
+        "section_width": "page-width",
+        "padding-block-start": 64,
+        "padding-block-end": 32
+      }
+    },
+    "stats": {
+      "type": "nexa-stats",
+      "blocks": {
+        "s1": { "type": "stat", "settings": { "value": "12,000+", "label": "Gifts delivered" } },
+        "s2": { "type": "stat", "settings": { "value": "4.8/5", "label": "Average rating" } },
+        "s3": { "type": "stat", "settings": { "value": "64", "label": "Districts covered" } },
+        "s4": { "type": "stat", "settings": { "value": "48 hrs", "label": "Typical delivery" } }
+      },
+      "block_order": ["s1", "s2", "s3", "s4"],
+      "settings": {
+        "band": "cream",
+        "section_width": "page-width",
+        "padding-block-start": 56,
+        "padding-block-end": 56
+      }
+    },
+    "faq": {
+      "type": "nexa-faq",
+      "blocks": {
+        "q1": {
+          "type": "question",
+          "settings": {
+            "question": "How long does delivery take?",
+            "answer": "<p>Inside Dhaka, 24 to 48 hours. Anywhere else in Bangladesh, 2 to 4 working days. You get an SMS with the courier's number as soon as the parcel leaves us.</p>",
+            "open": true
+          }
+        },
+        "q2": {
+          "type": "question",
+          "settings": {
+            "question": "Can I pay cash on delivery?",
+            "answer": "<p>Yes, everywhere in Bangladesh. You can also pay with bKash, Nagad, Rocket or any Visa / Mastercard at checkout. Prepaid orders ship first.</p>"
+          }
+        },
+        "q3": {
+          "type": "question",
+          "settings": {
+            "question": "Is the gift wrapping really free?",
+            "answer": "<p>It is. Every order goes out in a Nexa box with a ribbon and a blank message card. Add your message in the order notes at checkout and we will write it for you.</p>"
+          }
+        },
+        "q4": {
+          "type": "question",
+          "settings": {
+            "question": "What if it does not fit, or they do not like it?",
+            "answer": "<p>Send it back within 7 days, unused and in its original box, and we will exchange it or refund you. Ring sizing exchanges are free.</p>"
+          }
+        },
+        "q5": {
+          "type": "question",
+          "settings": {
+            "question": "Are the watches and sunglasses authentic?",
+            "answer": "<p>Every piece is sourced direct from the brand or its authorised distributor, then checked by hand before it ships. Anything that fails the check never reaches you.</p>"
+          }
+        }
+      },
+      "block_order": ["q1", "q2", "q3", "q4", "q5"],
+      "settings": {
+        "eyebrow": "Good to know",
+        "heading": "Questions we get every day",
+        "band": "none",
+        "section_width": "page-width",
+        "padding-block-start": 64,
+        "padding-block-end": 40
+      }
+    },
+    "newsletter": {
+      "type": "nexa-newsletter",
+      "settings": {
+        "eyebrow": "The list",
+        "heading": "Get 10% off your",
+        "heading_accent": "first gift.",
+        "body": "<p>New arrivals, restocks and the occasional quiet sale. One email a week at most — and the discount code lands in your inbox straight away.</p>",
+        "placeholder": "Your email address",
+        "button_label": "Send my code",
+        "note": "No spam. Unsubscribe any time.",
+        "success_text": "You are in. Check your inbox for the code.",
+        "section_width": "page-width",
+        "padding-block-start": 40,
+        "padding-block-end": 80
       }
     }
   },
   "order": [
-    "hero_jVaWmY",
-    "product_list_fa6P9H"
+    "hero",
+    "promise_bar",
+    "categories",
+    "bestsellers",
+    "split_giftsets",
+    "new_arrivals",
+    "gift_finder",
+    "split_beauty",
+    "reviews",
+    "stats",
+    "faq",
+    "newsletter"
   ]
 }

@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="400" height="500" role="img" aria-label="Leather wallets">
+  <defs>
+    <linearGradient id="wBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f9f4ec"/>
+      <stop offset="1" stop-color="#ece2d2"/>
+    </linearGradient>
+    <linearGradient id="wLeather" x1="0" y1="0" x2="0.5" y2="1">
+      <stop offset="0" stop-color="#5b4735"/>
+      <stop offset="0.55" stop-color="#3b2e23"/>
+      <stop offset="1" stop-color="#2a2018"/>
+    </linearGradient>
+    <linearGradient id="wLower" x1="0" y1="0" x2="0.4" y2="1">
+      <stop offset="0" stop-color="#4a3a2c"/>
+      <stop offset="1" stop-color="#241b14"/>
+    </linearGradient>
+    <linearGradient id="wPlate" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e8ce9c"/>
+      <stop offset="0.5" stop-color="#b4884b"/>
+      <stop offset="1" stop-color="#8b6634"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="400" height="500" fill="url(#wBg)"/>
+  <circle cx="200" cy="238" r="132" fill="#ffffff" opacity="0.55"/>
+  <ellipse cx="200" cy="352" rx="128" ry="16" fill="#2b211a" opacity="0.1"/>
+
+  <!-- cards fanned out of the top -->
+  <g>
+    <rect x="196" y="150" width="112" height="70" rx="7" fill="#efe6d6" transform="rotate(9 252 185)"/>
+    <rect x="196" y="150" width="112" height="70" rx="7" fill="none" stroke="#d6c8b3" stroke-width="1.4" transform="rotate(9 252 185)"/>
+
+    <rect x="150" y="144" width="112" height="70" rx="7" fill="#ffffff"/>
+    <rect x="150" y="144" width="112" height="70" rx="7" fill="none" stroke="#d9cdbb" stroke-width="1.5"/>
+    <rect x="162" y="160" width="30" height="21" rx="4" fill="#d9bc86"/>
+    <rect x="162" y="190" width="66" height="5" rx="2.5" fill="#e4dacb"/>
+    <rect x="162" y="201" width="40" height="4" rx="2" fill="#ece4d8"/>
+  </g>
+
+  <!-- wallet: closed bifold, wider than tall -->
+  <g>
+    <!-- upper leaf -->
+    <path d="M96 218c0-8.8 7.2-16 16-16h176c8.8 0 16 7.2 16 16v42H96z" fill="url(#wLeather)"/>
+    <!-- fold seam -->
+    <rect x="96" y="258" width="208" height="7" fill="#1a1410" opacity="0.55"/>
+    <!-- lower leaf -->
+    <path d="M96 263h208v49c0 8.8-7.2 16-16 16H112c-8.8 0-16-7.2-16-16z" fill="url(#wLower)"/>
+
+    <!-- edge highlight along the fold -->
+    <rect x="96" y="256" width="208" height="2" fill="#8a6f52" opacity="0.5"/>
+
+    <!-- stitching -->
+    <path d="M108 212h184" stroke="#b4884b" stroke-width="1.4" stroke-dasharray="5 6" opacity="0.7" stroke-linecap="round"/>
+    <path d="M108 318h184" stroke="#b4884b" stroke-width="1.4" stroke-dasharray="5 6" opacity="0.7" stroke-linecap="round"/>
+    <path d="M104 216v96" stroke="#b4884b" stroke-width="1.4" stroke-dasharray="5 6" opacity="0.55" stroke-linecap="round"/>
+    <path d="M296 216v96" stroke="#b4884b" stroke-width="1.4" stroke-dasharray="5 6" opacity="0.55" stroke-linecap="round"/>
+
+    <!-- grain -->
+    <g stroke="#ffffff" opacity="0.07" stroke-width="1.5" stroke-linecap="round">
+      <path d="M120 234h64M120 244h38M212 288h60M120 296h44"/>
+    </g>
+
+    <!-- top-left sheen -->
+    <path d="M114 214c22-6 54-8 88-8" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" opacity="0.14" fill="none"/>
+
+    <!-- gold logo plate, bottom right -->
+    <rect x="240" y="284" width="44" height="26" rx="6" fill="url(#wPlate)"/>
+    <g transform="translate(262 297)">
+      <path d="M-8 7V-7L8 7V-7" fill="none" stroke="#3a2d20" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"/>
+    </g>
+  </g>
+</svg>

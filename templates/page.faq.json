@@ -1,0 +1,261 @@
+{
+  "sections": {
+    "hero": {
+      "type": "nexa-page-hero",
+      "settings": {
+        "source": "page",
+        "heading": "Help & FAQ",
+        "body": "<p>Delivery, payment, returns, sizing and authenticity — the short answers, in plain language. Still stuck? <a href=\"/pages/contact\">Message us</a>.</p>",
+        "show_breadcrumbs": true,
+        "band": "none",
+        "section_width": "page-width"
+      }
+    },
+    "faq_orders": {
+      "type": "nexa-faq",
+      "blocks": {
+        "q1": {
+          "type": "question",
+          "settings": {
+            "question": "How long will my order take to arrive?",
+            "answer": "<p>Inside Dhaka: 24 to 48 hours. Rest of Bangladesh: 2 to 4 working days. Orders placed before 4pm are dispatched the same day.</p>",
+            "open": true
+          }
+        },
+        "q2": {
+          "type": "question",
+          "settings": {
+            "question": "How much is delivery?",
+            "answer": "<p>Free on orders over ৳2,000. Below that it is ৳60 inside Dhaka and ৳120 elsewhere in Bangladesh.</p>"
+          }
+        },
+        "q3": {
+          "type": "question",
+          "settings": {
+            "question": "Can I track my parcel?",
+            "answer": "<p>Yes. You get an SMS with the courier's tracking number and phone number as soon as the parcel leaves our hands.</p>"
+          }
+        },
+        "q4": {
+          "type": "question",
+          "settings": {
+            "question": "Can I ask for delivery on a specific date?",
+            "answer": "<p>Add the date to your order notes at checkout. For birthdays, anniversaries and Eid we hold the parcel and time it so it lands that morning.</p>"
+          }
+        },
+        "q5": {
+          "type": "question",
+          "settings": {
+            "question": "Do you deliver outside Bangladesh?",
+            "answer": "<p>Not yet. We ship to all 64 districts inside Bangladesh only. International shipping is on the list for next year.</p>"
+          }
+        }
+      },
+      "block_order": ["q1", "q2", "q3", "q4", "q5"],
+      "settings": {
+        "eyebrow": "Delivery",
+        "heading": "Getting it to you",
+        "band": "none",
+        "section_width": "page-width",
+        "padding-block-start": 56,
+        "padding-block-end": 24
+      }
+    },
+    "faq_payment": {
+      "type": "nexa-faq",
+      "blocks": {
+        "q1": {
+          "type": "question",
+          "settings": {
+            "question": "What payment methods do you accept?",
+            "answer": "<p>Cash on delivery anywhere in Bangladesh, plus bKash, Nagad, Rocket, and Visa / Mastercard / American Express at checkout.</p>",
+            "open": true
+          }
+        },
+        "q2": {
+          "type": "question",
+          "settings": {
+            "question": "Is cash on delivery available everywhere?",
+            "answer": "<p>Yes, all 64 districts. For orders over ৳10,000 we ask for a small advance to cover the courier, refunded into the order total.</p>"
+          }
+        },
+        "q3": {
+          "type": "question",
+          "settings": {
+            "question": "Is it safe to pay by card here?",
+            "answer": "<p>Card and mobile payments run through Shopify's encrypted checkout. We never see or store your card number.</p>"
+          }
+        },
+        "q4": {
+          "type": "question",
+          "settings": {
+            "question": "Do prices include VAT?",
+            "answer": "<p>Yes. Every price on the site is the final price. Nothing is added at checkout except delivery, where it applies.</p>"
+          }
+        }
+      },
+      "block_order": ["q1", "q2", "q3", "q4"],
+      "settings": {
+        "eyebrow": "Payment",
+        "heading": "Paying for it",
+        "band": "cream",
+        "section_width": "page-width",
+        "padding-block-start": 56,
+        "padding-block-end": 56
+      }
+    },
+    "faq_returns": {
+      "type": "nexa-faq",
+      "blocks": {
+        "q1": {
+          "type": "question",
+          "settings": {
+            "question": "What is your return window?",
+            "answer": "<p>7 days from the day it is delivered. The item has to be unused and back in its original box with the tags on.</p>",
+            "open": true
+          }
+        },
+        "q2": {
+          "type": "question",
+          "settings": {
+            "question": "Who pays for the return courier?",
+            "answer": "<p>We do, if the item is faulty, damaged or not what you ordered. If you simply changed your mind, it is ৳100 deducted from the refund.</p>"
+          }
+        },
+        "q3": {
+          "type": "question",
+          "settings": {
+            "question": "Can I exchange a ring for a different size?",
+            "answer": "<p>Yes, and the first size exchange is free. Message us on WhatsApp with your order number and the size you need.</p>"
+          }
+        },
+        "q4": {
+          "type": "question",
+          "settings": {
+            "question": "Can beauty products be returned?",
+            "answer": "<p>Only unopened and with the seal intact. For hygiene reasons we cannot take back anything that has been used.</p>"
+          }
+        },
+        "q5": {
+          "type": "question",
+          "settings": {
+            "question": "How long does a refund take?",
+            "answer": "<p>Two to five working days once the item reaches us and passes the check. bKash and Nagad refunds are usually same day.</p>"
+          }
+        }
+      },
+      "block_order": ["q1", "q2", "q3", "q4", "q5"],
+      "settings": {
+        "eyebrow": "Returns",
+        "heading": "If it is not right",
+        "band": "none",
+        "section_width": "page-width",
+        "padding-block-start": 56,
+        "padding-block-end": 24
+      }
+    },
+    "faq_products": {
+      "type": "nexa-faq",
+      "blocks": {
+        "q1": {
+          "type": "question",
+          "settings": {
+            "question": "How do I find my ring size?",
+            "answer": "<p>Wrap a strip of paper around the base of the finger, mark where it meets, and measure the length in millimetres. 52mm is a UK L, 54mm a UK N, 57mm a UK P. If you are between sizes, go up.</p>",
+            "open": true
+          }
+        },
+        "q2": {
+          "type": "question",
+          "settings": {
+            "question": "Are the watches water resistant?",
+            "answer": "<p>Most are 3ATM — fine in rain and hand-washing, not for swimming or showers. Anything rated 5ATM or above is listed as such on the product page.</p>"
+          }
+        },
+        "q3": {
+          "type": "question",
+          "settings": {
+            "question": "Are your sunglasses really polarised?",
+            "answer": "<p>The ones labelled polarised are, and they carry UV400 protection. Hold two pairs at 90 degrees to each other — if the overlap goes black, they are genuine.</p>"
+          }
+        },
+        "q4": {
+          "type": "question",
+          "settings": {
+            "question": "Is the leather real?",
+            "answer": "<p>Where a product says full-grain or genuine leather, it is. Where we use vegan leather we say vegan leather. We do not blur the two.</p>"
+          }
+        },
+        "q5": {
+          "type": "question",
+          "settings": {
+            "question": "What warranty do I get?",
+            "answer": "<p>12 months on watch movements, 6 months on everything else against manufacturing faults. Wear and tear, water damage and accidental damage are not covered.</p>"
+          }
+        }
+      },
+      "block_order": ["q1", "q2", "q3", "q4", "q5"],
+      "settings": {
+        "eyebrow": "Products",
+        "heading": "Sizing, materials & warranty",
+        "band": "cream",
+        "section_width": "page-width",
+        "padding-block-start": 56,
+        "padding-block-end": 56
+      }
+    },
+    "content": {
+      "type": "main-page",
+      "blocks": {
+        "page-content": { "type": "page-content", "settings": {} }
+      },
+      "block_order": ["page-content"],
+      "settings": {
+        "gap": 20,
+        "padding-block-start": 40,
+        "padding-block-end": 24
+      }
+    },
+    "still_stuck": {
+      "type": "nexa-info-columns",
+      "blocks": {
+        "s1": {
+          "type": "column",
+          "settings": {
+            "icon": "phone",
+            "title": "WhatsApp us",
+            "text": "<p><a href=\"tel:+8801700000000\">+880 1700-000000</a><br>Every day, 10am – 9pm</p>",
+            "accent": true
+          }
+        },
+        "s2": {
+          "type": "column",
+          "settings": {
+            "icon": "mail",
+            "title": "Email us",
+            "text": "<p><a href=\"mailto:hello@nexabrandbd.com\">hello@nexabrandbd.com</a><br>Answered within a working day</p>"
+          }
+        },
+        "s3": {
+          "type": "column",
+          "settings": {
+            "icon": "headset",
+            "title": "Contact form",
+            "text": "<p>Prefer to write it out? <a href=\"/pages/contact\">Use the contact form</a> and we will come back to you.</p>"
+          }
+        }
+      },
+      "block_order": ["s1", "s2", "s3"],
+      "settings": {
+        "eyebrow": "Still stuck?",
+        "heading": "Ask us directly",
+        "align": "center",
+        "band": "none",
+        "section_width": "page-width",
+        "padding-block-start": 48,
+        "padding-block-end": 80
+      }
+    }
+  },
+  "order": ["hero", "faq_orders", "faq_payment", "faq_returns", "faq_products", "content", "still_stuck"]
+}

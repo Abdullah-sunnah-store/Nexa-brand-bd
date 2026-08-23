@@ -1,0 +1,150 @@
+{%- liquid
+  assign s = section.settings
+  assign band = ''
+  if s.band == 'cream'
+    assign band = ' nexa-band'
+  elsif s.band == 'dark'
+    assign band = ' nexa-band nexa-band--dark'
+  endif
+-%}
+
+<div class="section-background{{ band }}"></div>
+
+<div
+  class="section section--{{ s.section_width }} spacing-style{{ band }}"
+  style="{% render 'spacing-style', settings: s %}"
+>
+  {%- if s.heading != blank -%}
+    <div class="nexa-head nexa-head--center">
+      <div>
+        {%- if s.eyebrow != blank -%}
+          <p class="nexa-eyebrow nexa-eyebrow--center">{{ s.eyebrow }}</p>
+        {%- endif -%}
+        <h2 class="nexa-title">{{ s.heading }}</h2>
+        {%- if s.subheading != blank -%}
+          <p class="nexa-sub">{{ s.subheading }}</p>
+        {%- endif -%}
+      </div>
+    </div>
+  {%- endif -%}
+
+  <div class="nexa-quotes">
+    {%- for block in section.blocks -%}
+      {%- liquid
+        assign bs = block.settings
+        assign initial = bs.name | strip | slice: 0, 1 | upcase
+      -%}
+      <figure class="nexa-quote" {{ block.shopify_attributes }}>
+        <div class="nexa-quote__stars" role="img" aria-label="{{ bs.rating }} out of 5 stars">
+          {%- for i in (1..bs.rating) -%}
+            {% render 'nexa-icon', name: 'star', size: 15 %}
+          {%- endfor -%}
+        </div>
+        <blockquote class="nexa-quote__text">{{ bs.quote }}</blockquote>
+        <figcaption class="nexa-quote__who">
+          {%- if bs.avatar != blank -%}
+            {{
+              bs.avatar
+              | image_url: width: 80
+              | image_tag: class: 'nexa-quote__avatar', loading: 'lazy', alt: bs.name, width: 38, height: 38
+            }}
+          {%- else -%}
+            <span class="nexa-quote__avatar" aria-hidden="true">{{ initial }}</span>
+          {%- endif -%}
+          <span>
+            <span class="nexa-quote__name">{{ bs.name }}</span>
+            {%- if bs.location != blank -%}
+              <span class="nexa-quote__loc">{{ bs.location }}</span>
+            {%- endif -%}
+          </span>
+        </figcaption>
+      </figure>
+    {%- endfor -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Nexa reviews",
+  "tag": "section",
+  "class": "nexa-section",
+  "max_blocks": 6,
+  "blocks": [
+    {
+      "type": "review",
+      "name": "Review",
+      "settings": [
+        { "type": "range", "id": "rating", "label": "Stars", "min": 1, "max": 5, "step": 1, "default": 5 },
+        { "type": "textarea", "id": "quote", "label": "Quote", "default": "Ordered on Sunday, it reached Chattogram on Tuesday. The box alone made it look expensive." },
+        { "type": "text", "id": "name", "label": "Name", "default": "Rifat H." },
+        { "type": "text", "id": "location", "label": "Location", "default": "Chattogram" },
+        { "type": "image_picker", "id": "avatar", "label": "Photo" }
+      ]
+    }
+  ],
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "Loved by 12,000+ gift givers" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "What people say after they hand it over" },
+    { "type": "text", "id": "subheading", "label": "Subheading" },
+    {
+      "type": "select",
+      "id": "band",
+      "label": "Background",
+      "options": [
+        { "value": "none", "label": "Page background" },
+        { "value": "cream", "label": "Cream" },
+        { "value": "dark", "label": "Ink" }
+      ],
+      "default": "none"
+    },
+    {
+      "type": "select",
+      "id": "section_width",
+      "label": "Width",
+      "options": [
+        { "value": "page-width", "label": "Page" },
+        { "value": "full-width", "label": "Full" }
+      ],
+      "default": "page-width"
+    },
+    { "type": "header", "content": "Padding" },
+    { "type": "range", "id": "padding-block-start", "label": "Top", "min": 0, "max": 140, "step": 2, "unit": "px", "default": 64 },
+    { "type": "range", "id": "padding-block-end", "label": "Bottom", "min": 0, "max": 140, "step": 2, "unit": "px", "default": 64 }
+  ],
+  "presets": [
+    {
+      "name": "Nexa reviews",
+      "category": "Storytelling",
+      "blocks": [
+        {
+          "type": "review",
+          "settings": {
+            "rating": 5,
+            "quote": "Bought the watch and wallet set for my brother's wedding. He thought I spent three times what I did. The gift box does a lot of work.",
+            "name": "Rifat H.",
+            "location": "Chattogram"
+          }
+        },
+        {
+          "type": "review",
+          "settings": {
+            "rating": 5,
+            "quote": "Ordered at 11pm, the courier called me the next afternoon. Paid cash at the door. The ring was exactly the size on the chart.",
+            "name": "Nusrat J.",
+            "location": "Dhanmondi, Dhaka"
+          }
+        },
+        {
+          "type": "review",
+          "settings": {
+            "rating": 5,
+            "quote": "The sunglasses are genuinely polarised, not the fake kind. I checked against my car screen. Third order from them now.",
+            "name": "Tanvir A.",
+            "location": "Sylhet"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

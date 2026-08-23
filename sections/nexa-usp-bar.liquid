@@ -1,0 +1,108 @@
+{%- liquid
+  assign s = section.settings
+  assign band = ''
+  if s.band == 'cream'
+    assign band = ' nexa-band'
+  elsif s.band == 'dark'
+    assign band = ' nexa-band nexa-band--dark'
+  endif
+-%}
+
+<div class="section-background{{ band }}"></div>
+
+<div
+  class="section section--{{ s.section_width }} spacing-style{{ band }}"
+  style="{% render 'spacing-style', settings: s %}"
+>
+  <div class="nexa-usp">
+    {%- for block in section.blocks -%}
+      <div class="nexa-usp__item" {{ block.shopify_attributes }}>
+        <span class="nexa-usp__icon">{% render 'nexa-icon', name: block.settings.icon, size: 20 %}</span>
+        <div>
+          <p class="nexa-usp__title">{{ block.settings.title }}</p>
+          {%- if block.settings.text != blank -%}
+            <p class="nexa-usp__text">{{ block.settings.text }}</p>
+          {%- endif -%}
+        </div>
+      </div>
+    {%- endfor -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Nexa promise bar",
+  "tag": "section",
+  "class": "nexa-section",
+  "max_blocks": 6,
+  "blocks": [
+    {
+      "type": "item",
+      "name": "Promise",
+      "settings": [
+        {
+          "type": "select",
+          "id": "icon",
+          "label": "Icon",
+          "options": [
+            { "value": "truck", "label": "Delivery truck" },
+            { "value": "cash", "label": "Cash" },
+            { "value": "return", "label": "Return" },
+            { "value": "shield", "label": "Shield" },
+            { "value": "gift", "label": "Gift" },
+            { "value": "star", "label": "Star" },
+            { "value": "lock", "label": "Lock" },
+            { "value": "headset", "label": "Support" },
+            { "value": "clock", "label": "Clock" },
+            { "value": "sparkle", "label": "Sparkle" },
+            { "value": "diamond", "label": "Diamond" },
+            { "value": "box", "label": "Box" },
+            { "value": "tag", "label": "Tag" }
+          ],
+          "default": "truck"
+        },
+        { "type": "text", "id": "title", "label": "Title", "default": "Nationwide delivery" },
+        { "type": "text", "id": "text", "label": "Text", "default": "Dhaka in 24-48 hrs, rest of Bangladesh in 2-4 days." }
+      ]
+    }
+  ],
+  "settings": [
+    {
+      "type": "select",
+      "id": "band",
+      "label": "Background",
+      "options": [
+        { "value": "none", "label": "Page background" },
+        { "value": "cream", "label": "Cream" },
+        { "value": "dark", "label": "Ink" }
+      ],
+      "default": "none"
+    },
+    {
+      "type": "select",
+      "id": "section_width",
+      "label": "Width",
+      "options": [
+        { "value": "page-width", "label": "Page" },
+        { "value": "full-width", "label": "Full" }
+      ],
+      "default": "page-width"
+    },
+    { "type": "header", "content": "Padding" },
+    { "type": "range", "id": "padding-block-start", "label": "Top", "min": 0, "max": 120, "step": 2, "unit": "px", "default": 24 },
+    { "type": "range", "id": "padding-block-end", "label": "Bottom", "min": 0, "max": 120, "step": 2, "unit": "px", "default": 24 }
+  ],
+  "presets": [
+    {
+      "name": "Nexa promise bar",
+      "category": "Storytelling",
+      "blocks": [
+        { "type": "item", "settings": { "icon": "truck", "title": "Nationwide delivery", "text": "Dhaka in 24-48 hrs, rest of Bangladesh in 2-4 days." } },
+        { "type": "item", "settings": { "icon": "cash", "title": "Cash on delivery", "text": "Pay the courier when your gift arrives." } },
+        { "type": "item", "settings": { "icon": "return", "title": "7-day returns", "text": "Unused and in its box? Send it back, no questions." } },
+        { "type": "item", "settings": { "icon": "shield", "title": "100% authentic", "text": "Sourced direct. Every piece checked before it ships." } }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="400" height="500" role="img" aria-label="Sunglasses and eyewear">
+  <defs>
+    <linearGradient id="sBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f8f4ed"/>
+      <stop offset="1" stop-color="#e8ded0"/>
+    </linearGradient>
+    <linearGradient id="sLens" x1="0" y1="0" x2="0.7" y2="1">
+      <stop offset="0" stop-color="#6f5f4a"/>
+      <stop offset="0.5" stop-color="#3a3026"/>
+      <stop offset="1" stop-color="#231c15"/>
+    </linearGradient>
+    <linearGradient id="sFrame" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e8ce9c"/>
+      <stop offset="0.5" stop-color="#b4884b"/>
+      <stop offset="1" stop-color="#8b6634"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="400" height="500" fill="url(#sBg)"/>
+  <circle cx="200" cy="244" r="136" fill="#ffffff" opacity="0.5"/>
+  <ellipse cx="200" cy="352" rx="122" ry="15" fill="#2b211a" opacity="0.09"/>
+
+  <!-- temples -->
+  <path d="M74 232c-14 6-24 34-22 74" fill="none" stroke="url(#sFrame)" stroke-width="9" stroke-linecap="round"/>
+  <path d="M326 232c14 6 24 34 22 74" fill="none" stroke="url(#sFrame)" stroke-width="9" stroke-linecap="round"/>
+
+  <!-- lenses -->
+  <g>
+    <rect x="70" y="196" width="112" height="86" rx="26" fill="url(#sLens)"/>
+    <rect x="218" y="196" width="112" height="86" rx="26" fill="url(#sLens)"/>
+    <!-- lens shine -->
+    <path d="M88 268l52-64" stroke="#ffffff" stroke-width="9" stroke-linecap="round" opacity="0.16"/>
+    <path d="M104 274l52-64" stroke="#ffffff" stroke-width="4" stroke-linecap="round" opacity="0.12"/>
+    <path d="M236 268l52-64" stroke="#ffffff" stroke-width="9" stroke-linecap="round" opacity="0.16"/>
+    <path d="M252 274l52-64" stroke="#ffffff" stroke-width="4" stroke-linecap="round" opacity="0.12"/>
+  </g>
+
+  <!-- frame outlines -->
+  <rect x="70" y="196" width="112" height="86" rx="26" fill="none" stroke="url(#sFrame)" stroke-width="8"/>
+  <rect x="218" y="196" width="112" height="86" rx="26" fill="none" stroke="url(#sFrame)" stroke-width="8"/>
+
+  <!-- bridge -->
+  <path d="M182 216c10-9 26-9 36 0" fill="none" stroke="url(#sFrame)" stroke-width="8" stroke-linecap="round"/>
+
+  <!-- brow bar -->
+  <path d="M74 206h252" stroke="url(#sFrame)" stroke-width="5" stroke-linecap="round" opacity="0.55"/>
+
+  <!-- hinges -->
+  <circle cx="76" cy="230" r="5" fill="#8b6634"/>
+  <circle cx="324" cy="230" r="5" fill="#8b6634"/>
+
+  <!-- glint -->
+  <g fill="#b4884b" opacity="0.8">
+    <path d="M310 148l3.5 10.5 10.5 3.5-10.5 3.5-3.5 10.5-3.5-10.5-10.5-3.5 10.5-3.5z"/>
+  </g>
+</svg>

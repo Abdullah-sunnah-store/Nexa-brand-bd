@@ -1,12 +1,4 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */{
+{
   "sections": {
     "section": {
       "type": "main-blog-post",
@@ -20,7 +12,7 @@
             "max_width": "normal",
             "alignment": "center",
             "type_preset": "h2",
-            "font": "var(--font-body--family)",
+            "font": "var(--font-heading--family)",
             "line_height": "normal",
             "letter_spacing": "normal",
             "case": "none",
@@ -88,9 +80,76 @@
         "padding-block-start": 40,
         "padding-block-end": 80
       }
+    },
+    "promise": {
+      "type": "nexa-usp-bar",
+      "blocks": {
+        "u1": {
+          "type": "item",
+          "settings": {
+            "icon": "truck",
+            "title": "Nationwide delivery",
+            "text": "Dhaka in 24-48 hrs, rest of Bangladesh in 2-4 days."
+          }
+        },
+        "u2": {
+          "type": "item",
+          "settings": {
+            "icon": "cash",
+            "title": "Cash on delivery",
+            "text": "Pay the courier when your gift arrives at the door."
+          }
+        },
+        "u3": {
+          "type": "item",
+          "settings": {
+            "icon": "gift",
+            "title": "Free gift wrap",
+            "text": "Box, ribbon and a message card on every order."
+          }
+        },
+        "u4": {
+          "type": "item",
+          "settings": {
+            "icon": "return",
+            "title": "7-day returns",
+            "text": "Unused and in its box? Send it back, no questions."
+          }
+        }
+      },
+      "block_order": [
+        "u1",
+        "u2",
+        "u3",
+        "u4"
+      ],
+      "settings": {
+        "band": "none",
+        "section_width": "page-width",
+        "padding-block-start": 24,
+        "padding-block-end": 24
+      }
+    },
+    "newsletter": {
+      "type": "nexa-newsletter",
+      "settings": {
+        "eyebrow": "The list",
+        "heading": "Get 10% off your",
+        "heading_accent": "first gift.",
+        "body": "<p>New arrivals, restocks and the occasional quiet sale. One email a week at most.</p>",
+        "placeholder": "Your email address",
+        "button_label": "Send my code",
+        "note": "No spam. Unsubscribe any time.",
+        "success_text": "You are in. Check your inbox for the code.",
+        "section_width": "page-width",
+        "padding-block-start": 24,
+        "padding-block-end": 80
+      }
     }
   },
   "order": [
-    "section"
+    "section",
+    "promise",
+    "newsletter"
   ]
 }

@@ -1,0 +1,84 @@
+{%- assign s = section.settings -%}
+
+<div
+  class="section section--{{ s.section_width }} spacing-style"
+  style="{% render 'spacing-style', settings: s %}"
+>
+  <div class="nexa-news">
+    <div>
+      {%- if s.eyebrow != blank -%}
+        <p class="nexa-eyebrow">{{ s.eyebrow }}</p>
+      {%- endif -%}
+      <h2 class="nexa-news__title">
+        {{ s.heading }}
+        {%- if s.heading_accent != blank %} <em>{{ s.heading_accent }}</em>{% endif -%}
+      </h2>
+      {%- if s.body != blank -%}
+        <div class="nexa-news__text">{{ s.body }}</div>
+      {%- endif -%}
+    </div>
+
+    <div>
+      {%- form 'customer', class: 'nexa-news__formwrap' -%}
+        <input type="hidden" name="contact[tags]" value="newsletter">
+        <div class="nexa-news__form">
+          <label class="visually-hidden" for="NexaNews-{{ section.id }}">{{ s.placeholder }}</label>
+          <input
+            id="NexaNews-{{ section.id }}"
+            type="email"
+            name="contact[email]"
+            placeholder="{{ s.placeholder | escape }}"
+            autocomplete="email"
+            required
+          >
+          <button type="submit">{{ s.button_label }}</button>
+        </div>
+
+        {%- if form.errors -%}
+          <p class="nexa-news__note">{{ form.errors.translated_fields.email }} {{ form.errors.messages.email }}</p>
+        {%- elsif form.posted_successfully? -%}
+          <p class="nexa-news__success">{{ s.success_text }}</p>
+        {%- elsif s.note != blank -%}
+          <p class="nexa-news__note">{{ s.note }}</p>
+        {%- endif -%}
+      {%- endform -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Nexa newsletter",
+  "tag": "section",
+  "class": "nexa-section",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "The list" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Get 10% off your" },
+    { "type": "text", "id": "heading_accent", "label": "Heading accent", "default": "first gift." },
+    {
+      "type": "richtext",
+      "id": "body",
+      "label": "Body",
+      "default": "<p>New arrivals, restocks and the occasional quiet sale. One email a week at most — and the discount code lands in your inbox straight away.</p>"
+    },
+    { "type": "text", "id": "placeholder", "label": "Input placeholder", "default": "Your email address" },
+    { "type": "text", "id": "button_label", "label": "Button label", "default": "Send my code" },
+    { "type": "text", "id": "note", "label": "Small print", "default": "No spam. Unsubscribe any time." },
+    { "type": "text", "id": "success_text", "label": "Success message", "default": "You are in. Check your inbox for the code." },
+    {
+      "type": "select",
+      "id": "section_width",
+      "label": "Width",
+      "options": [
+        { "value": "page-width", "label": "Page" },
+        { "value": "full-width", "label": "Full" }
+      ],
+      "default": "page-width"
+    },
+    { "type": "header", "content": "Padding" },
+    { "type": "range", "id": "padding-block-start", "label": "Top", "min": 0, "max": 140, "step": 2, "unit": "px", "default": 40 },
+    { "type": "range", "id": "padding-block-end", "label": "Bottom", "min": 0, "max": 140, "step": 2, "unit": "px", "default": 72 }
+  ],
+  "presets": [{ "name": "Nexa newsletter", "category": "Email" }]
+}
+{% endschema %}

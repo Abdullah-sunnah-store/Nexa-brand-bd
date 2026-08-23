@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="400" height="500" role="img" aria-label="Wrist watches">
+  <defs>
+    <linearGradient id="tBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f7f3ec"/>
+      <stop offset="1" stop-color="#e9e1d4"/>
+    </linearGradient>
+    <linearGradient id="tCase" x1="0.2" y1="0" x2="0.8" y2="1">
+      <stop offset="0" stop-color="#e3c690"/>
+      <stop offset="0.45" stop-color="#b4884b"/>
+      <stop offset="1" stop-color="#8a6533"/>
+    </linearGradient>
+    <linearGradient id="tStrap" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#2f261d"/>
+      <stop offset="0.5" stop-color="#463726"/>
+      <stop offset="1" stop-color="#2f261d"/>
+    </linearGradient>
+    <radialGradient id="tDial" cx="0.35" cy="0.3" r="0.85">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="0.6" stop-color="#f4efe6"/>
+      <stop offset="1" stop-color="#ded4c3"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="400" height="500" fill="url(#tBg)"/>
+  <circle cx="200" cy="240" r="138" fill="#ffffff" opacity="0.5"/>
+  <ellipse cx="200" cy="404" rx="74" ry="12" fill="#2b211a" opacity="0.1"/>
+
+  <!-- straps -->
+  <path d="M170 118h60l-6 76h-48z" fill="url(#tStrap)"/>
+  <path d="M176 60h48v58h-48z" fill="url(#tStrap)"/>
+  <path d="M176 286h48l6 76h-60z" fill="url(#tStrap)"/>
+  <path d="M182 362h36v56a18 18 0 0 1-36 0z" fill="url(#tStrap)"/>
+  <g stroke="#b4884b" stroke-width="1.2" opacity="0.5" stroke-dasharray="4 5">
+    <path d="M182 66v124M218 66v124M182 292v122M218 292v122"/>
+  </g>
+
+  <!-- lugs -->
+  <rect x="168" y="176" width="64" height="20" rx="6" fill="#9c7440"/>
+  <rect x="168" y="284" width="64" height="20" rx="6" fill="#9c7440"/>
+
+  <!-- case -->
+  <circle cx="200" cy="240" r="84" fill="url(#tCase)"/>
+  <circle cx="200" cy="240" r="72" fill="#7c5a2c" opacity="0.35"/>
+  <circle cx="200" cy="240" r="68" fill="url(#tDial)"/>
+
+  <!-- crown -->
+  <rect x="282" y="230" width="16" height="20" rx="4" fill="#a97c3f"/>
+
+  <!-- indices -->
+  <g stroke="#3a3128" stroke-width="3" stroke-linecap="round">
+    <path d="M200 182v12M200 286v12M256 240h12M132 240h12"/>
+  </g>
+  <g fill="#9d9185">
+    <circle cx="234" cy="196" r="2.4"/><circle cx="244" cy="206" r="2.4"/>
+    <circle cx="234" cy="284" r="2.4"/><circle cx="244" cy="274" r="2.4"/>
+    <circle cx="166" cy="196" r="2.4"/><circle cx="156" cy="206" r="2.4"/>
+    <circle cx="166" cy="284" r="2.4"/><circle cx="156" cy="274" r="2.4"/>
+  </g>
+
+  <!-- subdial -->
+  <circle cx="200" cy="278" r="17" fill="none" stroke="#c9beae" stroke-width="1.5"/>
+
+  <!-- hands -->
+  <path d="M200 240V196" stroke="#241d16" stroke-width="4.5" stroke-linecap="round"/>
+  <path d="M200 240l38 22" stroke="#241d16" stroke-width="4" stroke-linecap="round"/>
+  <path d="M200 240l-26 34" stroke="#b4884b" stroke-width="2.2" stroke-linecap="round"/>
+  <circle cx="200" cy="240" r="5.5" fill="#241d16"/>
+  <circle cx="200" cy="240" r="2" fill="#e3c690"/>
+
+  <!-- glass shine -->
+  <path d="M150 206a68 68 0 0 1 44-40" fill="none" stroke="#ffffff" stroke-width="6" stroke-linecap="round" opacity="0.6"/>
+</svg>

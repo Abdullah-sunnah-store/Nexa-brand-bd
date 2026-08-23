@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 120" width="520" height="120" role="img" aria-label="NexaBrand BD">
+  <defs>
+    <linearGradient id="lgGold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#d8b878"/>
+      <stop offset="0.5" stop-color="#b4884b"/>
+      <stop offset="1" stop-color="#8a6533"/>
+    </linearGradient>
+  </defs>
+
+  <!-- diamond monogram -->
+  <g transform="translate(60 60)">
+    <path d="M0 -44L38 0 0 44 -38 0z" fill="none" stroke="url(#lgGold)" stroke-width="3"/>
+    <path d="M0 -28L24 0 0 28 -24 0z" fill="#14100c"/>
+    <path d="M-9 11V-11L9 11V-11" fill="none" stroke="#d8b878" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- wordmark -->
+  <text x="122" y="66"
+        font-family="'Playfair Display', Georgia, 'Times New Roman', serif"
+        font-size="44" letter-spacing="1.5" fill="#14100c">NEXABRAND</text>
+  <text x="124" y="94"
+        font-family="Inter, 'Helvetica Neue', Arial, sans-serif"
+        font-size="14" font-weight="600" letter-spacing="7.5" fill="#b4884b">BANGLADESH</text>
+</svg>
